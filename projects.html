@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Saini - projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="light-mode">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><span>Mohit Saini</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header" data-aos="fade-up">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p>Explore my data science and machine learning projects</p>
+            </div>
+        </section>
+
+        <section class="project-filters" data-aos="fade-up">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                    <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
+                    <button class="filter-btn" data-filter="deep-learning">Deep Learning</button>
+                    <button class="filter-btn" data-filter="nlp">NLP</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid">
+            <div class="container">
+                <div class="projects">
+                    <!-- Project 1 -->
+                    <div class="project-item" data-category="machine-learning data-analysis" data-aos="fade-up">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/project1.svg" alt="Predictive Analytics Dashboard">
+                            </div>
+                            <div class="project-content">
+                                <h3>Predictive Analytics Dashboard</h3>
+                                <p>A comprehensive dashboard for sales forecasting using time series analysis and machine learning algorithms.</p>
+                                <div class="project-tags">
+                                    <span>Python</span>
+                                    <span>Machine Learning</span>
+                                    <span>Tableau</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn small">Demo</a>
+                                    <a href="#" class="btn small secondary"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-item" data-category="nlp machine-learning" data-aos="fade-up">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/project2.svg" alt="Natural Language Processing Tool">
+                            </div>
+                            <div class="project-content">
+                                <h3>Natural Language Processing Tool</h3>
+                                <p>A tool that analyzes customer feedback and extracts sentiment and key topics using NLP techniques.</p>
+                                <div class="project-tags">
+                                    <span>NLP</span>
+                                    <span>Python</span>
+                                    <span>BERT</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn small">Demo</a>
+                                    <a href="#" class="btn small secondary"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-item" data-category="deep-learning" data-aos="fade-up">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/project3.svg" alt="Image Classification System">
+                            </div>
+                            <div class="project-content">
+                                <h3>Image Classification System</h3>
+                                <p>A deep learning model that classifies images with high accuracy, deployed as a web service.</p>
+                                <div class="project-tags">
+                                    <span>Deep Learning</span>
+                                    <span>CNN</span>
+                                    <span>Flask</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn small">Demo</a>
+                                    <a href="#" class="btn small secondary"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-item" data-category="data-analysis" data-aos="fade-up">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/project4.svg" alt="Customer Segmentation Analysis">
+                            </div>
+                            <div class="project-content">
+                                <h3>Customer Segmentation Analysis</h3>
+                                <p>Segmented customers based on purchasing behavior using clustering algorithms to improve marketing strategies.</p>
+                                <div class="project-tags">
+                                    <span>Clustering</span>
+                                    <span>Python</span>
+                                    <span>Data Visualization</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn small">Demo</a>
+                                    <a href="#" class="btn small secondary"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-item" data-category="machine-learning" data-aos="fade-up">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/project5.svg" alt="Fraud Detection System">
+                            </div>
+                            <div class="project-content">
+                                <h3>Fraud Detection System</h3>
+                                <p>Developed a machine learning model to detect fraudulent transactions with high precision and recall.</p>
+                                <div class="project-tags">
+                                    <span>Machine Learning</span>
+                                    <span>Python</span>
+                                    <span>Imbalanced Learning</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn small">Demo</a>
+                                    <a href="#" class="btn small secondary"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-item" data-category="deep-learning nlp" data-aos="fade-up">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/project6.svg" alt="Text Generation Model">
+                            </div>
+                            <div class="project-content">
+                                <h3>Text Generation Model</h3>
+                                <p>Built a transformer-based model for generating coherent and contextually relevant text for content creation.</p>
+                                <div class="project-tags">
+                                    <span>NLP</span>
+                                    <span>Transformers</span>
+                                    <span>PyTorch</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn small">Demo</a>
+                                    <a href="#" class="btn small secondary"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Mohit Saini's <span>Portfolio</span></h2>
+                    <p>Transforming data into insights</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/mohitsaini9093" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/MohitSaini9093" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Kaggle" target="_blank"><i class="fab fa-kaggle"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohit Saini Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
