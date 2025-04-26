@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g>
+    <ellipse cx="220" cy="300" rx="180" ry="150" fill="#f89939"/>
+    <ellipse cx="320" cy="210" rx="150" ry="130" fill="#3498db"/>
+    <text x="120" y="320" font-family="Arial, sans-serif" font-size="60" fill="white">scikit</text>
+    <text x="250" y="230" font-family="Arial, sans-serif" font-size="50" fill="white">learn</text>
+  </g>
+</svg>
