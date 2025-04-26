@@ -34,14 +34,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    // Mobile Menu Functionality
+    const mobileMenu = document.querySelector('.mobile-menu');
     const nav = document.querySelector('nav');
-    
-    mobileMenuBtn.addEventListener('click', function() {
-        nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-        mobileMenuBtn.innerHTML = nav.style.display === 'block' ? 
-            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    const overlay = document.querySelector('.overlay');
+
+    function toggleMobileMenu() {
+        mobileMenu.classList.toggle('active');
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    mobileMenu.addEventListener('click', toggleMobileMenu);
+    overlay.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when clicking on a nav link
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (nav.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
     });
     
     // Project filters (on projects page)

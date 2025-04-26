@@ -225,8 +225,17 @@ nav a.active {
 
 .mobile-menu {
     display: none;
-    font-size: 1.5rem;
     cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.mobile-menu i {
+    transition: var(--transition);
+}
+
+.mobile-menu.active i {
+    transform: rotate(90deg);
 }
 
 /* Hero Section */
@@ -956,6 +965,50 @@ footer {
     
     .projects {
         grid-template-columns: 1fr;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--header-bg);
+        padding: 2rem;
+        transition: var(--transition);
+        box-shadow: -2px 0 10px var(--shadow-color);
+        z-index: 1000;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+
+    .overlay.active {
+        display: block;
     }
 }
 
