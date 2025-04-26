@@ -38,12 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const nav = document.querySelector('nav');
     const overlay = document.querySelector('.overlay');
+    const menuIcon = mobileMenu.querySelector('i');
 
     function toggleMobileMenu() {
         mobileMenu.classList.toggle('active');
         nav.classList.toggle('active');
         overlay.classList.toggle('active');
-        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        
+        // Toggle menu icon
+        if (nav.classList.contains('active')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+            document.body.style.overflow = 'hidden';
+        } else {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        }
     }
 
     mobileMenu.addEventListener('click', toggleMobileMenu);
@@ -56,6 +67,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 toggleMobileMenu();
             }
         });
+    });
+
+    // Close mobile menu when resizing window to desktop size
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && nav.classList.contains('active')) {
+            toggleMobileMenu();
+        }
     });
     
     // Project filters (on projects page)
