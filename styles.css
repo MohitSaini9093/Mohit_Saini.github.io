@@ -505,59 +505,67 @@ nav a.active {
 /* Contact Page */
 .contact-section {
     padding: 5rem 0;
+    background-color: var(--background-alt);
 }
 
 .contact-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 3rem;
-    background-color: var(--card-bg);
-    border-radius: 0.5rem;
+    background: var(--card-bg);
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 6px var(--shadow-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
-    flex: 1;
-    padding: 2rem;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     color: white;
+    padding: 3rem;
 }
 
-.contact-info h2 {
+.contact-info h3 {
     color: white;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .contact-info p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.contact-details {
     margin-bottom: 2rem;
 }
 
-.info-item {
+.contact-item {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
-.info-item i {
+.contact-item i {
     font-size: 1.25rem;
     margin-top: 0.25rem;
 }
 
-.info-item h3 {
+.contact-item h4 {
     color: white;
     margin-bottom: 0.25rem;
+    font-size: 1.1rem;
 }
 
-.info-item p {
+.contact-item p {
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 0;
 }
 
 .social-links {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
 }
 
 .social-links a {
@@ -566,20 +574,20 @@ nav a.active {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     border-radius: 50%;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    background-color: white;
+    background: white;
     color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 .contact-form {
-    flex: 2;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .form-group {
@@ -589,6 +597,7 @@ nav a.active {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    color: var(--text-color);
     font-weight: 500;
 }
 
@@ -597,38 +606,58 @@ nav a.active {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid var(--border-color);
-    border-radius: 0.375rem;
-    background-color: var(--background-color);
+    border-radius: 8px;
+    background: var(--background-color);
     color: var(--text-color);
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
-.form-status {
-    margin-top: 1rem;
-    padding: 0.75rem;
-    border-radius: 0.375rem;
-    display: none;
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
-.form-status.success {
-    display: block;
-    background-color: rgba(16, 185, 129, 0.1);
-    color: var(--success-color);
-    border: 1px solid var(--success-color);
+.contact-form .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-.form-status.error {
-    display: block;
-    background-color: rgba(239, 68, 68, 0.1);
-    color: var(--error-color);
-    border: 1px solid var(--error-color);
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        padding: 2rem;
+    }
+    
+    .contact-form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .contact-info,
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .contact-item {
+        margin-bottom: 1rem;
+    }
 }
 
 /* FAQ Section */
@@ -786,7 +815,7 @@ footer {
     }
     
     .contact-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
 

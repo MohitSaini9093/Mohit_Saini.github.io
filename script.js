@@ -81,58 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
-    // FAQ accordion (on contact page)
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    if (faqItems.length > 0) {
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', function() {
-                // Close all other items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-                
-                // Toggle current item
-                item.classList.toggle('active');
-            });
-        });
-    }
-    
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const formDataObj = Object.fromEntries(formData.entries());
-            
-            // Simulate form submission (replace with actual form submission)
-            setTimeout(() => {
-                // Show success message
-                formStatus.textContent = 'Your message has been sent successfully! I will get back to you soon.';
-                formStatus.classList.add('success');
-                formStatus.style.display = 'block';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                }, 5000);
-            }, 1000);
-        });
-    }
-    
     // Add scroll animation to timeline items
     const timelineItems = document.querySelectorAll('.timeline-item');
     
